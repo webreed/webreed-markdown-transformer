@@ -14,9 +14,9 @@ import {PluginOptions} from "./PluginOptions";
  * @param env
  *   An environment that represents a webreed project.
  * @param options
- *   Additional options for configuring the plugin instnace.
+ *   Additional options for configuring the plugin instance.
  */
-export default function (env: Environment, options?: PluginOptions): void {
+export default function (env: Environment, options: PluginOptions): void {
   let instance = new MarkdownTransformer(options);
 
   env.transformers.set("markdown", instance);
