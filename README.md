@@ -1,8 +1,12 @@
-# webreed-markdown-transformer [![Build Status](https://travis-ci.org/webreed/webreed-markdown-transformer.svg?branch=master)](https://travis-ci.org/webreed/webreed-markdown-transformer)
+# webreed-markdown-transformer
 
 A plugin for [webreed](https://github.com/webreed/webreed) that provides support for
 processing markdown encoded resources using the [markdown-it](https://github.com/markdown-it/markdown-it)
 package.
+
+[![Build Status](https://travis-ci.org/webreed/webreed-markdown-transformer.svg?branch=master)](https://travis-ci.org/webreed/webreed-markdown-transformer)
+[![Dependency Status](https://david-dm.org/webreed/webreed-markdown-transformer.svg)](https://david-dm.org/webreed/webreed-markdown-transformer)
+[![devDependency Status](https://david-dm.org/webreed/webreed-markdown-transformer/dev-status.svg)](https://david-dm.org/webreed/webreed-markdown-transformer#info=devDependencies)
 
 
 ## Contribution Agreement
