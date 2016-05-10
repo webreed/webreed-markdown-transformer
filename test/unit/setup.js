@@ -7,8 +7,8 @@ import should from "should";
 
 import {Environment} from "webreed-core/lib/Environment";
 
-import setup from "../lib/setup";
-import {MarkdownTransformer} from "../lib/MarkdownTransformer";
+import setup from "../../lib/setup";
+import {MarkdownTransformer} from "../../lib/MarkdownTransformer";
 
 
 describe("#setup(env, options)", function () {
