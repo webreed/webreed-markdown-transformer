@@ -27,7 +27,7 @@ export class MarkdownTransformer implements Transformer {
     }
   }
 
-  public transform(resource: Resource, context: Object): Observable<Resource> {
+  public transform(resource: Resource, context: any): Observable<Resource> {
     if (!resource.body) {
       // There is no body of markdown content to transform!
       return Observable.of(resource);
