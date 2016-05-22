@@ -1,6 +1,6 @@
 {
   "name": "webreed-markdown-transformer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Markdown transformer plugin for webreed (uses markdown-it).",
   "repository": {
     "type": "git",
