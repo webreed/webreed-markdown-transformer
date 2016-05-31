@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 import {Resource} from "webreed-core/lib/Resource";
 import {Transformer} from "webreed-core/lib/plugin/Transformer";
 
-import {PluginOptions} from "../src/PluginOptions";
+import {PluginOptions} from "./PluginOptions";
 
 
 /**
