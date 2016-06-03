@@ -1,13 +1,15 @@
 // Copyright (c) Rotorz Limited. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root.
 
+"use strict";
 
-import given from "mocha-testdata";
-import should from "should";
 
-import {Environment} from "webreed-core/lib/Environment";
+const given = require("mocha-testdata");
+const should = require("should");
 
-import {MarkdownTransformer} from "../../lib/MarkdownTransformer";
+const Environment = require("webreed-core/lib/Environment").Environment;
+
+const MarkdownTransformer = require("../../lib/MarkdownTransformer").MarkdownTransformer;
 
 
 describe("MarkdownTransformer", function () {
