@@ -4,6 +4,8 @@
 "use strict";
 
 
+const path = require("path");
+
 const given = require("mocha-testdata");
 const should = require("should");
 
@@ -33,7 +35,7 @@ describe("MarkdownTransformer", function () {
         .should.be.a.Function();
     });
 
-    it("wires up plugin", function () {
+    it("wires up a given plugin instance", function () {
       let usedPlugin = false;
 
       new MarkdownTransformer({
@@ -44,7 +46,21 @@ describe("MarkdownTransformer", function () {
 
       usedPlugin
         .should.be.true();
-    })
+    });
+
+    it("wires up a named plugin package", function () {
+      let fakePluginPackage = path.resolve(__dirname, "../fakes/fake-plugin");
+      let fakePluginModule = require(fakePluginPackage);
+
+      new MarkdownTransformer({
+        plugins: [
+          { package: fakePluginPackage, options: { foo: 42 } }
+        ]
+      });
+
+      fakePluginModule.lastOptions.foo
+        .should.be.eql(42);
+    });
 
   });
 

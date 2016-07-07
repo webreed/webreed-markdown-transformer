@@ -23,7 +23,7 @@ export class MarkdownTransformer implements Transformer {
     this._markdownProcessor = markdownIt(options);
 
     if (!!options && Array.isArray(options.plugins)) {
-      options.plugins.map(this._markdownProcessor.use);
+      options.plugins.map(this.installPlugin.bind(this));
     }
   }
 
@@ -40,6 +40,15 @@ export class MarkdownTransformer implements Transformer {
       body: outputBody,
     });
     return Observable.of(outputResource);
+  }
+
+  private installPlugin(plugin: any): void {
+    if (typeof plugin === "object" && typeof plugin.package === "string") {
+      this._markdownProcessor.use(require(plugin.package), plugin.options);
+    }
+    else {
+      this._markdownProcessor.use(plugin);
+    }
   }
 
 }
